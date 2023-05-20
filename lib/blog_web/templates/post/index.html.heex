@@ -13,7 +13,9 @@
       </p>
 
        <div class="flex justify-center  gap-4 items-center">
-       <span class="bg-blue-500 text-white  rounded-lg p-2"><%= link "Show", to: Routes.post_path(@conn, :show, post) %></span>
+
+   <span class="bg-blue-500 text-white  rounded-lg p-2"><%= link "Show", to: Routes.post_path(@conn, :show, post) %></span>
+
         <span class="bg-blue-500 text-white rounded-lg p-2"><%= link "Edit", to: Routes.post_path(@conn, :edit, post) %></span>
         <span class="bg-blue-500 text-white rounded-lg p-2"><%= link "Delete", to: Routes.post_path(@conn, :delete, post), method: :delete, data: [confirm: "Are you sure?"] %></span>
 

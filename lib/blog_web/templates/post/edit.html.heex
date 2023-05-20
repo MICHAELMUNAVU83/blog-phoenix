@@ -1,5 +1,5 @@
-<h1>Edit Post</h1>
+<h1 class="font-bold text-5xl text-center">Edit Post</h1>
 
 <%= render "form.html", Map.put(assigns, :action, Routes.post_path(@conn, :update, @post)) %>
 
-<span><%= link "Back", to: Routes.post_path(@conn, :index) %></span>
+<span class="flex justify-center items-center bg-red-500 p-2 w-[5%] text-white  rounded-lg hover:scale-105 transition-all duration-500 ease-in-out mx-auto"><%= link "Back", to: Routes.post_path(@conn, :index) %></span>
