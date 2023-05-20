@@ -1,18 +1,12 @@
-<h1>Show Post</h1>
 
-<ul>
+<div class="bg-gray-200 w-[50%] my-8 mx-auto hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer p-4 rounded-2xl">
+    <p class="text-red-500 font-bold text-3xl">
+      <%= @post.title %>
+      </p>
+        <p>
+      <%= @post.body %>
+      </p>
+      </div>
 
-  <li>
-    <strong>Title:</strong>
-    <%= @post.title %>
-  </li>
 
-  <li>
-    <strong>Body:</strong>
-    <%= @post.body %>
-  </li>
-
-</ul>
-
-<span><%= link "Edit", to: Routes.post_path(@conn, :edit, @post) %></span> |
-<span><%= link "Back", to: Routes.post_path(@conn, :index) %></span>
+<span class="flex justify-center items-center bg-red-500 p-2 w-[5%] text-white  rounded-lg hover:scale-105 transition-all duration-500 ease-in-out mx-auto"><%= link "Back", to: Routes.post_path(@conn, :index) %></span>
