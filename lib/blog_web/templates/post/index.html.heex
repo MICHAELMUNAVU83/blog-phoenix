@@ -1,0 +1,31 @@
+<h1 class="font-bold text-5xl my-8 text-center">
+  All Posts
+</h1>
+
+<div class="w-[50%] flex flex-col gap-4 mx-auto">
+<%= for post <- @posts do %>
+    <div class="bg-gray-200 hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer p-4 rounded-2xl">
+    <p class="text-red-500 font-bold text-3xl">
+      <%=post.title %>
+      </p>
+        <p>
+      <%=post.body %>
+      </p>
+
+       <div class="flex justify-center  gap-4 items-center">
+       <span class="bg-blue-500 text-white  rounded-lg p-2"><%= link "Show", to: Routes.post_path(@conn, :show, post) %></span>
+        <span class="bg-blue-500 text-white rounded-lg p-2"><%= link "Edit", to: Routes.post_path(@conn, :edit, post) %></span>
+        <span class="bg-blue-500 text-white rounded-lg p-2"><%= link "Delete", to: Routes.post_path(@conn, :delete, post), method: :delete, data: [confirm: "Are you sure?"] %></span>
+
+        </div>
+
+
+    </div>
+
+
+
+<% end %>
+</div>
+
+
+<span class=" bg-green-500 text-3xl font-bold flex justify-center w-[15%] rounded-lg my-8 mx-auto  p-2 text-white "><%= link "New Post", to: Routes.post_path(@conn, :new) %></span>
